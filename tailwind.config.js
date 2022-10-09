@@ -8,5 +8,5 @@ module.exports = {
     theme: {
         extend: {},
     },
-    plugins: [require("tailwindcss-flip")],
+    plugins: [require("tailwindcss-flip"), require("@tailwindcss/forms")],
 };
