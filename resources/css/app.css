@@ -2,7 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
+    @font-face {
+        font-family: "iran_sans";
+        src: url("../../public/assets/fonts/fa/iran_sans.ttf");
+    }
+    html {
+        direction: rtl;
+        writing-mode: vertical-tb;
+    }
     body {
-        font-family: "Nunito", sans-serif;
+        font-family: "iran_sans", "sans-serif";
+        text-align: start;
+    }
+
+    body,
+    *::placeholder {
+        @apply text-sm font-medium;
+    }
+
+    td:not(:last-child) {
+        border-bottom: 0;
+    }
+
+    th:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 640px) {
+        table {
+            display: inline-table !important;
+        }
+
+        thead tr:not(:first-child) {
+            display: none;
+        }
     }
 }
